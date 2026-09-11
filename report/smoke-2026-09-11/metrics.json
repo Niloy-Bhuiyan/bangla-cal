@@ -1,0 +1,4917 @@
+{
+  "label": "PRELIMINARY, UNREVIEWED DATA",
+  "generated_at": "2026-09-11T14:34:02.360393+00:00",
+  "seed": 42,
+  "generator_sha256": "2dc3c3a18f4ea52c5d2f03bf78b4a51f4e117eb7818decc58d6a04714c514161",
+  "metrics_code_sha256": "4d863111e2683797e421dfc3cb5a060291cc4e187d4dd1c13dbc31694b11a85f",
+  "resamples": 2000,
+  "inputs": [
+    {
+      "path": "results/smoke-2026-09-11/gemini",
+      "manifest": {
+        "label": "PRELIMINARY, UNREVIEWED DATA",
+        "run_id": "gemini",
+        "created_at": "2026-09-11T07:23:23.093899+00:00",
+        "code_revision": "985c5c3bf6f78f09012efd97a76ac6336c57f7d8",
+        "plan": {
+          "config": {
+            "provider": "gemini",
+            "model": "gemini-3.5-flash-lite",
+            "tier": "free",
+            "max_tokens": 1024,
+            "interval_seconds": 6.0,
+            "timeout": 90,
+            "logprobs": false
+          },
+          "dataset_sha256": "2ec218415d4cf4efd673c50377f50a015e97ca87eb1cd42feafc9eb8d3955d46",
+          "selected_ids": [
+            "ban-cal-0102",
+            "ban-cal-0120",
+            "ban-cal-0129",
+            "ban-cal-0137",
+            "ban-cal-0142",
+            "ban-cal-0157",
+            "ban-cal-0101",
+            "ban-cal-0117",
+            "ban-cal-0124",
+            "ban-cal-0136",
+            "ban-cal-0146",
+            "ban-cal-0152",
+            "ban-cal-0105",
+            "ban-cal-0111",
+            "ban-cal-0127",
+            "ban-cal-0135",
+            "ban-cal-0149",
+            "ban-cal-0155",
+            "ban-cal-0110",
+            "ban-cal-0118",
+            "ban-cal-0122",
+            "ban-cal-0132",
+            "ban-cal-0145",
+            "ban-cal-0160"
+          ],
+          "samples": 3,
+          "sample_temperature": 0.7,
+          "primary_temperature": 0.0,
+          "seed": 42,
+          "prompt_version": "bn-confidence-v1",
+          "prompt_sha256": "eed1be575fa380a53c6924faf4b44faef0ec11a01478260645feab609d6391e6"
+        },
+        "status": "complete",
+        "completed_at": "2026-09-11T07:35:20.657350+00:00",
+        "completed_questions": 24
+      },
+      "judge": {
+        "label": "PRELIMINARY, UNREVIEWED DATA",
+        "plan": {
+          "config": {
+            "provider": "gemini",
+            "model": "gemini-3.5-flash",
+            "tier": "free",
+            "max_tokens": 1024,
+            "interval_seconds": 6.0,
+            "timeout": 90,
+            "logprobs": false
+          },
+          "version": "judge-v1",
+          "rubric_sha256": "6e154a0bba5bde579591e2f3a993d26a1aa35ee09a4058056e92250a430c1a8a",
+          "responses_sha256": "b0fa20e522a3ca1fb8884d75812bcc2ae73e6e078fea56ea88acac3d98486597",
+          "questions_sha256": "452e93d94b4f0d426daee2526b810704b411ab5ebe8507af2d6c9d4fe5718bbd",
+          "code_sha256": "af55d333d705efabba970771133c84370df77f21b4bccc11478220a78fe5a434"
+        },
+        "created_at": "2026-09-11T07:37:19.320956+00:00",
+        "human_validation": "PENDING HUMAN VALIDATION"
+      },
+      "agreement": {
+        "label": "PRELIMINARY, UNREVIEWED DATA",
+        "status": "PENDING HUMAN VALIDATION",
+        "human_completed": 0,
+        "queue_size": 20,
+        "random_sample_size": 3,
+        "random_pairs_complete": 0,
+        "agreement": {
+          "grade": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "abstained": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "behavior_met": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "specific_unfounded": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "confident_language": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "kappa_grade": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        "disagreement_ids": [],
+        "unresolved_ids": [],
+        "note": "Agreement measured on random sample only; human overrides do not rewrite original judge labels."
+      },
+      "scores_sha256": "2df372fa5b3ca7c29d4f180e50344e90aeee0df770a0efe74a5bb03cb8fd9a3f",
+      "n_responses": 24,
+      "n_ungraded": 15,
+      "n_parse_errors": 0,
+      "n_two_confidence_methods": 24,
+      "grading_errors": [
+        {
+          "at": "2026-09-11T07:39:46.274223+00:00",
+          "status": 429,
+          "detail": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 13.567460058s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"13s\"\n      }\n    ]\n  }\n}\n"
+        },
+        {
+          "at": "2026-09-11T14:31:49.703797+00:00",
+          "status": 429,
+          "detail": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 10.789366622s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"10s\"\n      }\n    ]\n  }\n}\n"
+        }
+      ],
+      "model_versions": [
+        "gemini-3.5-flash-lite"
+      ],
+      "n_human_reviewed_questions": 0
+    },
+    {
+      "path": "results/smoke-2026-09-11/groq",
+      "manifest": {
+        "label": "PRELIMINARY, UNREVIEWED DATA",
+        "run_id": "groq",
+        "created_at": "2026-09-11T07:23:24.636127+00:00",
+        "code_revision": "985c5c3bf6f78f09012efd97a76ac6336c57f7d8",
+        "plan": {
+          "config": {
+            "provider": "groq",
+            "model": "qwen/qwen3.8-27b",
+            "tier": "free",
+            "max_tokens": 1024,
+            "interval_seconds": 6.0,
+            "timeout": 90,
+            "logprobs": false
+          },
+          "dataset_sha256": "2ec218415d4cf4efd673c50377f50a015e97ca87eb1cd42feafc9eb8d3955d46",
+          "selected_ids": [
+            "ban-cal-0102",
+            "ban-cal-0120",
+            "ban-cal-0129",
+            "ban-cal-0137",
+            "ban-cal-0142",
+            "ban-cal-0157",
+            "ban-cal-0101",
+            "ban-cal-0117",
+            "ban-cal-0124",
+            "ban-cal-0136",
+            "ban-cal-0146",
+            "ban-cal-0152",
+            "ban-cal-0105",
+            "ban-cal-0111",
+            "ban-cal-0127",
+            "ban-cal-0135",
+            "ban-cal-0149",
+            "ban-cal-0155",
+            "ban-cal-0110",
+            "ban-cal-0118",
+            "ban-cal-0122",
+            "ban-cal-0132",
+            "ban-cal-0145",
+            "ban-cal-0160"
+          ],
+          "samples": 3,
+          "sample_temperature": 0.7,
+          "primary_temperature": 0.0,
+          "seed": 42,
+          "prompt_version": "bn-confidence-v1",
+          "prompt_sha256": "eed1be575fa380a53c6924faf4b44faef0ec11a01478260645feab609d6391e6"
+        },
+        "status": "complete",
+        "completed_at": "2026-09-11T07:33:41.314129+00:00",
+        "completed_questions": 24
+      },
+      "judge": {
+        "label": "PRELIMINARY, UNREVIEWED DATA",
+        "plan": {
+          "config": {
+            "provider": "gemini",
+            "model": "gemini-3.5-flash",
+            "tier": "free",
+            "max_tokens": 1024,
+            "interval_seconds": 6.0,
+            "timeout": 90,
+            "logprobs": false
+          },
+          "version": "judge-v1",
+          "rubric_sha256": "6e154a0bba5bde579591e2f3a993d26a1aa35ee09a4058056e92250a430c1a8a",
+          "responses_sha256": "1b59738e878dc991eebab0bf03291473d63f16e985d269c2ca7ddbc561f1db2a",
+          "questions_sha256": "452e93d94b4f0d426daee2526b810704b411ab5ebe8507af2d6c9d4fe5718bbd",
+          "code_sha256": "af55d333d705efabba970771133c84370df77f21b4bccc11478220a78fe5a434"
+        },
+        "created_at": "2026-09-11T07:34:13.137425+00:00",
+        "human_validation": "PENDING HUMAN VALIDATION"
+      },
+      "agreement": {
+        "label": "PRELIMINARY, UNREVIEWED DATA",
+        "status": "PENDING HUMAN VALIDATION",
+        "human_completed": 0,
+        "queue_size": 19,
+        "random_sample_size": 3,
+        "random_pairs_complete": 0,
+        "agreement": {
+          "grade": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "abstained": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "behavior_met": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "specific_unfounded": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "confident_language": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "kappa_grade": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 0,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        "disagreement_ids": [],
+        "unresolved_ids": [],
+        "note": "Agreement measured on random sample only; human overrides do not rewrite original judge labels."
+      },
+      "scores_sha256": "376c61fedf3e19e614a0c69ca20ba6080cf415e7b5a839629e6c679af69e9ac8",
+      "n_responses": 24,
+      "n_ungraded": 12,
+      "n_parse_errors": 0,
+      "n_two_confidence_methods": 24,
+      "grading_errors": [
+        {
+          "at": "2026-09-11T07:37:28.011133+00:00",
+          "status": 503,
+          "detail": "{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+        },
+        {
+          "at": "2026-09-11T07:39:48.305116+00:00",
+          "status": 429,
+          "detail": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 11.536925287s.\",\n    \"status\": \"RESOURCE_EXHAUSTED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.Help\",\n        \"links\": [\n          {\n            \"description\": \"Learn more about Gemini API quotas\",\n            \"url\": \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.QuotaFailure\",\n        \"violations\": [\n          {\n            \"quotaMetric\": \"generativelanguage.googleapis.com/generate_content_free_tier_requests\",\n            \"quotaId\": \"GenerateRequestsPerDayPerProjectPerModel-FreeTier\",\n            \"quotaDimensions\": {\n              \"location\": \"global\",\n              \"model\": \"gemini-3.5-flash\"\n            },\n            \"quotaValue\": \"20\"\n          }\n        ]\n      },\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.RetryInfo\",\n        \"retryDelay\": \"11s\"\n      }\n    ]\n  }\n}\n"
+        }
+      ],
+      "model_versions": [
+        "qwen/qwen3.8-27b"
+      ],
+      "n_human_reviewed_questions": 0
+    }
+  ],
+  "summaries": {
+    "gemini/gemini-3.5-flash-lite/overall": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "overall",
+      "n_scored": 9,
+      "n_calibration": 4,
+      "n_self_consistency": 4,
+      "n_hallucination_denominator": 1,
+      "n_abstained": 4,
+      "n_abstention_target": 1,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": 0.22499999999999998,
+          "ci95": [
+            0.0,
+            0.72
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1986,
+          "undefined_resamples": 14,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": 0.2025,
+          "ci95": [
+            0.0,
+            0.648
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1986,
+          "undefined_resamples": 14,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": 0.08333333333333333,
+          "ci95": [
+            0.0,
+            0.26666666666666666
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1986,
+          "undefined_resamples": 14,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": 0.027777777777777776,
+          "ci95": [
+            0.0,
+            0.08888888888888888
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1986,
+          "undefined_resamples": 14,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1300,
+          "undefined_resamples": 700,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 0.5,
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1988,
+          "undefined_resamples": 12,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1300,
+          "undefined_resamples": 700,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1998,
+          "undefined_resamples": 2,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1269,
+          "undefined_resamples": 731,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": 0.22499999999999998,
+          "ci95": [
+            0.0,
+            0.72
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1986,
+          "undefined_resamples": 14,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": 0.225,
+          "ci95": [
+            0.0,
+            0.72
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1986,
+          "undefined_resamples": 14,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1300,
+          "undefined_resamples": 700,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 9,
+          "resamples": 2000,
+          "valid_resamples": 1300,
+          "undefined_resamples": 700,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 4,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1986,
+            "undefined_resamples": 14,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "coverage": 0.75,
+          "risk": 0.0,
+          "accepted": 3,
+          "answerable": 4,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1944,
+            "undefined_resamples": 56,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.75,
+            "ci95": [
+              0.2,
+              1.0
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1986,
+            "undefined_resamples": 14,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 1.0,
+          "risk": 0.25,
+          "accepted": 4,
+          "answerable": 4,
+          "risk_ci": {
+            "estimate": 0.25,
+            "ci95": [
+              0.0,
+              0.8
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1986,
+            "undefined_resamples": 14,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1986,
+            "undefined_resamples": 14,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.25,
+          "accepted": 4,
+          "answerable": 4,
+          "risk_ci": {
+            "estimate": 0.25,
+            "ci95": [
+              0.0,
+              0.8
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1986,
+            "undefined_resamples": 14,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 9,
+            "resamples": 2000,
+            "valid_resamples": 1986,
+            "undefined_resamples": 14,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 4,
+          "confidence": 0.975,
+          "accuracy": 0.75
+        }
+      ]
+    },
+    "gemini/gemini-3.5-flash-lite/ambiguous_contested": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "ambiguous_contested",
+      "n_scored": 1,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 0,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "gemini/gemini-3.5-flash-lite/code_switched": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "code_switched",
+      "n_scored": 1,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 1,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "gemini/gemini-3.5-flash-lite/factual_high_certainty": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "factual_high_certainty",
+      "n_scored": 2,
+      "n_calibration": 2,
+      "n_self_consistency": 2,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 0,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "coverage": 1.0,
+          "risk": 0.0,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.0,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 2,
+          "confidence": 1.0,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "gemini/gemini-3.5-flash-lite/factual_low_resource": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "factual_low_resource",
+      "n_scored": 2,
+      "n_calibration": 2,
+      "n_self_consistency": 2,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 0,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": 0.44999999999999996,
+          "ci95": [
+            0.0,
+            0.9
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": 0.405,
+          "ci95": [
+            0.0,
+            0.81
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": 0.16666666666666666,
+          "ci95": [
+            0.0,
+            0.3333333333333333
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": 0.05555555555555555,
+          "ci95": [
+            0.0,
+            0.1111111111111111
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": 0.44999999999999996,
+          "ci95": [
+            0.0,
+            0.9
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": 0.45,
+          "ci95": [
+            0.0,
+            0.9
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "coverage": 0.5,
+          "risk": 0.0,
+          "accepted": 1,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 1505,
+            "undefined_resamples": 495,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.5,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 1.0,
+          "risk": 0.5,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.5,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.5,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.5,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 2,
+          "confidence": 0.95,
+          "accuracy": 0.5
+        }
+      ]
+    },
+    "gemini/gemini-3.5-flash-lite/temporally_unstable": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "temporally_unstable",
+      "n_scored": 2,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 2,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "gemini/gemini-3.5-flash-lite/unanswerable_adversarial": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "unanswerable_adversarial",
+      "n_scored": 1,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 1,
+      "n_abstained": 1,
+      "n_abstention_target": 1,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 1,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 1,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/overall": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "overall",
+      "n_scored": 12,
+      "n_calibration": 4,
+      "n_self_consistency": 4,
+      "n_hallucination_denominator": 2,
+      "n_abstained": 5,
+      "n_abstention_target": 2,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": 0.22499999999999998,
+          "ci95": [
+            0.0,
+            0.755
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1981,
+          "undefined_resamples": 19,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": 0.22625,
+          "ci95": [
+            0.0,
+            0.722
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1981,
+          "undefined_resamples": 19,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": 0.16666666666666669,
+          "ci95": [
+            0.0,
+            0.33333333333333337
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1981,
+          "undefined_resamples": 19,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": 0.05555555555555556,
+          "ci95": [
+            0.0,
+            0.11111111111111113
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1981,
+          "undefined_resamples": 19,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1792,
+          "undefined_resamples": 208,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 0.6,
+          "ci95": [
+            0.0,
+            1.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1998,
+          "undefined_resamples": 2,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1792,
+          "undefined_resamples": 208,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1738,
+          "undefined_resamples": 262,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": 0.22499999999999998,
+          "ci95": [
+            0.0,
+            0.755
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1981,
+          "undefined_resamples": 19,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": 0.22499999999999998,
+          "ci95": [
+            0.0,
+            0.755
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1981,
+          "undefined_resamples": 19,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1792,
+          "undefined_resamples": 208,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 12,
+          "resamples": 2000,
+          "valid_resamples": 1792,
+          "undefined_resamples": 208,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 5,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1998,
+            "undefined_resamples": 2,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "coverage": 0.6,
+          "risk": 0.0,
+          "accepted": 3,
+          "answerable": 5,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1948,
+            "undefined_resamples": 52,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.6,
+            "ci95": [
+              0.11562500000000053,
+              1.0
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1998,
+            "undefined_resamples": 2,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "accepted": 5,
+          "answerable": 5,
+          "risk_ci": {
+            "estimate": 0.2,
+            "ci95": [
+              0.0,
+              0.6666666666666666
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1998,
+            "undefined_resamples": 2,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1998,
+            "undefined_resamples": 2,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.2,
+          "accepted": 5,
+          "answerable": 5,
+          "risk_ci": {
+            "estimate": 0.2,
+            "ci95": [
+              0.0,
+              0.6666666666666666
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1998,
+            "undefined_resamples": 2,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 12,
+            "resamples": 2000,
+            "valid_resamples": 1998,
+            "undefined_resamples": 2,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 4,
+          "confidence": 0.975,
+          "accuracy": 0.75
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/ambiguous_contested": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "ambiguous_contested",
+      "n_scored": 2,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 0,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/code_switched": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "code_switched",
+      "n_scored": 2,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 1,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 1479,
+          "undefined_resamples": 521,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 1479,
+          "undefined_resamples": 521,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 1,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 1505,
+            "undefined_resamples": 495,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "coverage": 1.0,
+          "risk": 0.0,
+          "accepted": 1,
+          "answerable": 1,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 1505,
+            "undefined_resamples": 495,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 1505,
+            "undefined_resamples": 495,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.0,
+          "accepted": 1,
+          "answerable": 1,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 1505,
+            "undefined_resamples": 495,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 1505,
+            "undefined_resamples": 495,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/factual_high_certainty": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "factual_high_certainty",
+      "n_scored": 2,
+      "n_calibration": 2,
+      "n_self_consistency": 2,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 0,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "coverage": 1.0,
+          "risk": 0.0,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.0,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 2,
+          "confidence": 1.0,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/factual_low_resource": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "factual_low_resource",
+      "n_scored": 2,
+      "n_calibration": 2,
+      "n_self_consistency": 2,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 0,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": 0.44999999999999996,
+          "ci95": [
+            0.050000000000000044,
+            0.95
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": 0.4525,
+          "ci95": [
+            0.0025000000000000044,
+            0.9025
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": 0.33333333333333337,
+          "ci95": [
+            0.3333333333333333,
+            0.33333333333333337
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": 0.11111111111111112,
+          "ci95": [
+            0.1111111111111111,
+            0.11111111111111113
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": 0.44999999999999996,
+          "ci95": [
+            0.050000000000000044,
+            0.95
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": 0.44999999999999996,
+          "ci95": [
+            0.050000000000000044,
+            0.95
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": 0.0,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 1.0,
+          "risk": 0.5,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.5,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": 1.0,
+          "risk": 0.5,
+          "accepted": 2,
+          "answerable": 2,
+          "risk_ci": {
+            "estimate": 0.5,
+            "ci95": [
+              0.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ],
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 2000,
+            "undefined_resamples": 0,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 2,
+          "confidence": 0.95,
+          "accuracy": 0.5
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/temporally_unstable": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "temporally_unstable",
+      "n_scored": 2,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 0,
+      "n_abstained": 2,
+      "n_abstention_target": 0,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    },
+    "groq/qwen/qwen3.8-27b/unanswerable_adversarial": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "category": "unanswerable_adversarial",
+      "n_scored": 2,
+      "n_calibration": 0,
+      "n_self_consistency": 0,
+      "n_hallucination_denominator": 2,
+      "n_abstained": 2,
+      "n_abstention_target": 2,
+      "n_partial": 0,
+      "metrics": {
+        "ece_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_confidence": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "brier_self_consistency": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_rate": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_precision": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category5": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "abstention_recall_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "behavior_success": {
+          "estimate": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hedging_success_category4": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:5": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "ece_confidence:15": {
+          "estimate": null,
+          "ci95": null,
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 0,
+          "undefined_resamples": 2000,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.7": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        },
+        "hallucination_threshold_0.9": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "n_questions": 2,
+          "resamples": 2000,
+          "valid_resamples": 2000,
+          "undefined_resamples": 0,
+          "seed": 42,
+          "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+        }
+      },
+      "risk_coverage": [
+        {
+          "threshold": 1.01,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        },
+        {
+          "threshold": 0.0,
+          "coverage": null,
+          "risk": null,
+          "accepted": 0,
+          "answerable": 0,
+          "risk_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          },
+          "coverage_ci": {
+            "estimate": null,
+            "ci95": null,
+            "n_questions": 2,
+            "resamples": 2000,
+            "valid_resamples": 0,
+            "undefined_resamples": 2000,
+            "seed": 42,
+            "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+          }
+        }
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "n": 0,
+          "confidence": null,
+          "accuracy": null
+        }
+      ]
+    }
+  }
+}
