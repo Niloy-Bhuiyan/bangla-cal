@@ -10,6 +10,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from dataset.validate import DRAFT_LABEL
+from dataset.review import assess_reviews
 from metrics.core import HEADLINES, summarize
 from runner.io import digest, now, read_jsonl, write_json
 from runner.audit import audit_run, unique_index
@@ -25,7 +26,7 @@ def format_metric(metric):
     return value
 
 
-def generate(run_dirs, output, resamples=2000, seed=42, release=False):
+def generate(run_dirs, output, resamples=2000, seed=42, release=False, dataset_reviews=None):
     output = Path(output)
     inputs, rows, draft = [], [], False
     for directory in run_dirs:
@@ -74,6 +75,9 @@ def generate(run_dirs, output, resamples=2000, seed=42, release=False):
                     raise ValueError("human evidence lacks response binding or reviewer attribution")
         this_draft = any(len(q["reviewed_by"]) < 2 for q in questions)
         draft |= this_draft
+        review_evidence = assess_reviews(questions, dataset_reviews or [], allow_extra=True)
+        if release and review_evidence["n_reviewed_with_evidence"] != len(questions):
+            raise ValueError("release requires matching independent native-speaker review evidence via --dataset-reviews")
         if release and (this_draft or manifest["status"] != "complete" or not 400 <= len(questions) <= 600
                         or agreement["status"] not in ("VALIDATED", "HUMAN GRADED; JUDGE LOW AGREEMENT")
                         or scores["n_ungraded"]):
@@ -82,6 +86,7 @@ def generate(run_dirs, output, resamples=2000, seed=42, release=False):
             raise ValueError("stale scores: response count changed")
         rows.extend(scores["rows"])
         inputs.append({"path": folder.as_posix(), "manifest": manifest, "judge": judge,
+            "dataset_review_evidence": review_evidence,
             "agreement": agreement, "scores_sha256": digest(scores),
             "n_responses": len(responses), "n_ungraded": scores["n_ungraded"],
             "n_parse_errors": sum(bool(r["parse_errors"]) for r in responses),
@@ -248,8 +253,9 @@ def main():
     parser.add_argument("--resamples", type=int, default=2000)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--release", action="store_true")
+    parser.add_argument("--dataset-reviews", nargs="+", help="actual native-speaker submissions; required for --release")
     args = parser.parse_args()
-    generate(args.run_dirs, args.output, args.resamples, args.seed, args.release)
+    generate(args.run_dirs, args.output, args.resamples, args.seed, args.release, args.dataset_reviews)
     print(f"Report written to {args.output}; inspect its dataset and grading status labels.")
 
 

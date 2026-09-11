@@ -36,6 +36,27 @@ substantive changes. Only real humans may add their reviewer IDs in a reviewed
 revision; scripts and AI assistants must never add them or impersonate reviewers.
 The validator checks syntax/counts, not whether a claimed identity is authentic.
 
+Two blank, independent forms for the first batch are in `review-forms/batch01/`.
+Give each reviewer their own copy and the exact dataset revision, without the
+other reviewer's decisions. Each human fills their own ID, native-speaker
+attestation, date (YYYY-MM-DD), decision, all boolean checks, and source/rationale
+notes. Preserve first decisions before adjudication. `status` is a display label;
+acceptance is determined by the actual decision and checks, never by that label.
+
+```sh
+python -m dataset.review prepare dataset/draft-v0.1-batch01.jsonl dataset/review-forms/NEW_BATCH
+python -m dataset.review status dataset/draft-v0.1-batch01.jsonl FIRST_HUMAN.jsonl SECOND_HUMAN.jsonl
+```
+
+`prepare` writes only blank forms and refuses existing output directories.
+`status` never modifies the questions or adds `reviewed_by` IDs. The content hash
+covers all substantive schema fields except `reviewed_by` and administrative
+`notes`; keep rubrics and source evidence in the hashed fields. Source or answer
+changes invalidate old reviews. Only actual humans may update review IDs after
+acceptance. The report's `--release --dataset-reviews FIRST_HUMAN.jsonl
+SECOND_HUMAN.jsonl` gate requires matching acceptance evidence for those IDs.
+Identity and independence still require maintainer verification.
+
 Reserve five example IDs in pilot_ids.json. Do not use pilot responses to make
 headline claims or tune prompts on the eventual evaluation set. The first draft
 batch is separate; expand it through human-guided topic selection toward 400–600.
