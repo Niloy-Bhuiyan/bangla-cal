@@ -1,8 +1,8 @@
 {
   "label": "PRELIMINARY, UNREVIEWED DATA",
-  "generated_at": "2026-09-11T14:34:02.360393+00:00",
+  "generated_at": "2026-09-11T14:48:53.608459+00:00",
   "seed": 42,
-  "generator_sha256": "2dc3c3a18f4ea52c5d2f03bf78b4a51f4e117eb7818decc58d6a04714c514161",
+  "generator_sha256": "451ae74eb2af573abb61938977ad884502a9c1bf254a0aa98320c6bd4d1046ab",
   "metrics_code_sha256": "4d863111e2683797e421dfc3cb5a060291cc4e187d4dd1c13dbc31694b11a85f",
   "resamples": 2000,
   "inputs": [
@@ -86,6 +86,16 @@
         "label": "PRELIMINARY, UNREVIEWED DATA",
         "status": "PENDING HUMAN VALIDATION",
         "human_completed": 0,
+        "assessment_inputs": {
+          "questions_sha256": "8ed231e10fde68a2a496e99d2885240cf38685eb37aff98e16a61dc696028bb8",
+          "responses_sha256": "b0fa20e522a3ca1fb8884d75812bcc2ae73e6e078fea56ea88acac3d98486597",
+          "raw_sha256": "41fcfc7be6ff6806a114f5ca074292d4cd1ee883adf92a71aaf0f5a1eb43d4b0",
+          "n_questions": 24,
+          "judge_scores_sha256": "eab573795089123eb0d2bc477e783e9f1f792b19cf13561dd1d64d4b9dc1879c",
+          "validation_plan_sha256": "2ad913ed9c9be4e4d02c93f1153d848ee9c647150d5c40b5ec0d1944193177da",
+          "human_reviews_sha256": "357675e375c06dd014b14bb9d5c9dc88ba14b485757475b55b22e0902c5a0ddc",
+          "accepted_human_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
         "queue_size": 20,
         "random_sample_size": 3,
         "random_pairs_complete": 0,
@@ -155,7 +165,7 @@
         "unresolved_ids": [],
         "note": "Agreement measured on random sample only; human overrides do not rewrite original judge labels."
       },
-      "scores_sha256": "2df372fa5b3ca7c29d4f180e50344e90aeee0df770a0efe74a5bb03cb8fd9a3f",
+      "scores_sha256": "ab7e0b0578e2981cf749757738e839c7569c1dd5ddc1e7d7f0da59b6ca7f0773",
       "n_responses": 24,
       "n_ungraded": 15,
       "n_parse_errors": 0,
@@ -257,6 +267,16 @@
         "label": "PRELIMINARY, UNREVIEWED DATA",
         "status": "PENDING HUMAN VALIDATION",
         "human_completed": 0,
+        "assessment_inputs": {
+          "questions_sha256": "8ed231e10fde68a2a496e99d2885240cf38685eb37aff98e16a61dc696028bb8",
+          "responses_sha256": "1b59738e878dc991eebab0bf03291473d63f16e985d269c2ca7ddbc561f1db2a",
+          "raw_sha256": "54b8d6ae5f83d3996bfbd8a7fcd9a92af32ce1b63f068e8f1fdc2fa45bd73494",
+          "n_questions": 24,
+          "judge_scores_sha256": "c9b8eb68f1f6a7c4d6f3d7abcfe84e467417ebc3c0fbd455dbdc0265cab66bab",
+          "validation_plan_sha256": "80bc2c9db37d7b089d3b8346133a322420fb9593af9ef2e68cb70085f2e83429",
+          "human_reviews_sha256": "c5be480651c696f0bf287a1067199ee2d06348d6687df2b430ea4879066d6767",
+          "accepted_human_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
         "queue_size": 19,
         "random_sample_size": 3,
         "random_pairs_complete": 0,
@@ -326,7 +346,7 @@
         "unresolved_ids": [],
         "note": "Agreement measured on random sample only; human overrides do not rewrite original judge labels."
       },
-      "scores_sha256": "376c61fedf3e19e614a0c69ca20ba6080cf415e7b5a839629e6c679af69e9ac8",
+      "scores_sha256": "5be707fb4fe37ea87985fe1d5b8a2eae41efbae11d5c246bba801e10abb102a8",
       "n_responses": 24,
       "n_ungraded": 12,
       "n_parse_errors": 0,

@@ -9,6 +9,7 @@ import random
 
 from metrics.core import bootstrap, ratio
 from runner.io import append_jsonl, digest, now, read_jsonl, write_json
+from runner.audit import audit_run, unique_index
 from scoring.judge import FIELDS, validate_grade
 
 BEHAVIORAL = {"ambiguous_contested", "unanswerable_adversarial", "code_switched"}
@@ -72,13 +73,19 @@ def kappa(pairs):
 
 def assess(run_dir, human_path=None, resamples=2000, seed=42):
     folder = Path(run_dir)
+    run_integrity = audit_run(folder)
     plan = json.loads((folder / "grading/validation_plan.json").read_text(encoding="utf-8"))
     responses = read_jsonl(folder / "responses.jsonl")
     if digest(responses) != plan["response_sha256"]:
         raise ValueError("responses changed after validation sampling")
     response_map = {r["question_id"]: r for r in responses}
     questions = {r["id"]: r for r in read_jsonl(folder / "questions.jsonl")}
-    judges = {r["question_id"]: r for r in read_jsonl(folder / "grading/judge_scores.jsonl")}
+    judge_rows = read_jsonl(folder / "grading/judge_scores.jsonl")
+    judges = unique_index(judge_rows, "question_id")
+    for qid, judge in judges.items():
+        if qid not in response_map or judge["response_sha256"] != digest(response_map[qid]):
+            raise ValueError("judge score refers to a different response")
+        validate_grade(judge)
     human_rows = read_jsonl(human_path or folder / "grading" / plan.get("queue_file", "human_queue.jsonl"))
     human, seen = {}, set()
     raw = {r["question_id"]: r["text"] for r in read_jsonl(folder / "raw.jsonl") if r["sample_index"] == 0}
@@ -123,6 +130,9 @@ def assess(run_dir, human_path=None, resamples=2000, seed=42):
         if len(human) == len(responses) and not unresolved:
             status = "HUMAN GRADED; JUDGE LOW AGREEMENT"
     result = {"label": plan["label"], "status": status, "human_completed": len(human),
+        "assessment_inputs": {**run_integrity, "judge_scores_sha256": digest(judge_rows),
+                              "validation_plan_sha256": digest(plan), "human_reviews_sha256": digest(human_rows),
+                              "accepted_human_sha256": digest(list(human.values()))},
         "queue_size": len(plan["queue_ids"]), "random_sample_size": len(plan["random_ids"]),
         "random_pairs_complete": len(paired), "agreement": agreement,
         "disagreement_ids": disagreements, "unresolved_ids": unresolved,
@@ -144,6 +154,8 @@ def assess(run_dir, human_path=None, resamples=2000, seed=42):
             "grade_source": "human" if qid in human else "judge", "validation_status": status})
     # Derived artifact, never overwrite the human queue or original judge scores.
     write_json(folder / "grading/scored.json", {"label": plan["label"], "status": status,
+        "assessment_inputs": result["assessment_inputs"],
+        "human_reviews": list(human.values()),
         "n_responses": len(responses), "n_ungraded": len(responses) - len(merged), "rows": merged})
     return result
 

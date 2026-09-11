@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 from dataset.validate import DRAFT_LABEL
 from metrics.core import HEADLINES, summarize
 from runner.io import digest, now, read_jsonl, write_json
+from runner.audit import audit_run, unique_index
+from scoring.judge import FIELDS, validate_grade
 
 
 def format_metric(metric):
@@ -28,12 +30,48 @@ def generate(run_dirs, output, resamples=2000, seed=42, release=False):
     inputs, rows, draft = [], [], False
     for directory in run_dirs:
         folder = Path(directory)
+        integrity = audit_run(folder)
         manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
         scores = json.loads((folder / "grading/scored.json").read_text(encoding="utf-8"))
         agreement = json.loads((folder / "grading/agreement.json").read_text(encoding="utf-8"))
         judge = json.loads((folder / "grading/judge_manifest.json").read_text(encoding="utf-8"))
         questions = read_jsonl(folder / "questions.jsonl")
         responses = read_jsonl(folder / "responses.jsonl")
+        source_hashes = {**integrity,
+            "judge_scores_sha256": digest(read_jsonl(folder / "grading/judge_scores.jsonl")),
+            "validation_plan_sha256": digest(json.loads((folder / "grading/validation_plan.json").read_text(encoding="utf-8")))}
+        assessed = scores.get("assessment_inputs", {})
+        if not assessed or any(assessed.get(k) != value for k, value in source_hashes.items()):
+            raise ValueError("stale or unaudited scores; rerun scoring.human assess with the actual human file, if any")
+        if agreement.get("assessment_inputs") != assessed or scores["status"] != agreement["status"]:
+            raise ValueError("agreement and scores come from different assessments")
+        score_index = unique_index(scores["rows"], "question_id")
+        response_index = unique_index(responses, "question_id")
+        question_index = unique_index(questions, "id")
+        judges = unique_index(read_jsonl(folder / "grading/judge_scores.jsonl"), "question_id")
+        human = unique_index(scores.get("human_reviews", []), "question_id")
+        if digest(list(human.values())) != assessed.get("accepted_human_sha256"):
+            raise ValueError("human grading evidence differs from its assessment")
+        if not set(score_index).issubset(response_index) or scores["n_ungraded"] != len(responses) - len(score_index):
+            raise ValueError("score coverage counts or IDs are inconsistent")
+        for qid, row in score_index.items():
+            validate_grade(row)
+            question, response = question_index[qid], response_index[qid]
+            if any(row[key] != question[key] for key in ("category", "expected_behavior", "ground_truth_answer")):
+                raise ValueError("score references a different question or ground truth")
+            confidence = response["primary"]["confidence"] if response["primary"] else None
+            if row["confidence"] != confidence or row["self_consistency"] != response["self_consistency"]:
+                raise ValueError("score confidence differs from its response")
+            if row["grade_source"] == "judge" and (qid not in judges or any(row[f] != judges[qid][f] for f in FIELDS)):
+                raise ValueError("derived judge grade differs from original judgment")
+            if row["grade_source"] not in ("judge", "human"):
+                raise ValueError("unknown grade source")
+            if row["grade_source"] == "human":
+                evidence = human.get(qid)
+                if not evidence or any(row[f] != evidence[f] for f in FIELDS):
+                    raise ValueError("human grade has no matching submitted evidence")
+                if evidence["response_sha256"] != digest(response) or not evidence.get("reviewer_id") or not evidence.get("reviewed_at"):
+                    raise ValueError("human evidence lacks response binding or reviewer attribution")
         this_draft = any(len(q["reviewed_by"]) < 2 for q in questions)
         draft |= this_draft
         if release and (this_draft or manifest["status"] != "complete" or not 400 <= len(questions) <= 600

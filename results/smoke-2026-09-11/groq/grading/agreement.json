@@ -2,6 +2,16 @@
   "label": "PRELIMINARY, UNREVIEWED DATA",
   "status": "PENDING HUMAN VALIDATION",
   "human_completed": 0,
+  "assessment_inputs": {
+    "questions_sha256": "8ed231e10fde68a2a496e99d2885240cf38685eb37aff98e16a61dc696028bb8",
+    "responses_sha256": "1b59738e878dc991eebab0bf03291473d63f16e985d269c2ca7ddbc561f1db2a",
+    "raw_sha256": "54b8d6ae5f83d3996bfbd8a7fcd9a92af32ce1b63f068e8f1fdc2fa45bd73494",
+    "n_questions": 24,
+    "judge_scores_sha256": "c9b8eb68f1f6a7c4d6f3d7abcfe84e467417ebc3c0fbd455dbdc0265cab66bab",
+    "validation_plan_sha256": "80bc2c9db37d7b089d3b8346133a322420fb9593af9ef2e68cb70085f2e83429",
+    "human_reviews_sha256": "c5be480651c696f0bf287a1067199ee2d06348d6687df2b430ea4879066d6767",
+    "accepted_human_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
   "queue_size": 19,
   "random_sample_size": 3,
   "random_pairs_complete": 0,
