@@ -14,3 +14,4 @@ dist/
 results/local/
 report/generated/
 *.sqlite*
+codex-build-prompt.md
