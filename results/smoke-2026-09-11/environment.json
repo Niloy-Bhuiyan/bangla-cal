@@ -1,0 +1,15 @@
+{
+  "label": "PRELIMINARY, UNREVIEWED DATA",
+  "captured_at": "2026-09-11T07:31:49.456546+00:00",
+  "python": "3.13.5",
+  "platform": "Windows",
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "python-dotenv": "1.2.2",
+    "matplotlib": "3.10.8"
+  },
+  "cost_basis": "Gemini and Groq free-tier accounts supplied by maintainer; no paid integration or features requested",
+  "design": "24 identical questions per model; seed 42; 4 per category; primary temperature 0; 3 samples at 0.7; max output tokens 1024",
+  "review_status": "AWAITING HUMAN REVIEW",
+  "notes": "API quota headers are logged as returned; public model IDs may remain mutable aliases."
+}

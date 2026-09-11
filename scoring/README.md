@@ -11,10 +11,12 @@ saved before parsing; malformed labels are logged and routed for human grading.
 Use `--resume` after interruption. The judge never sets dataset reviewed_by.
 
 `python -m scoring.human queue RUN_DIR` selects a seeded uniform 15% validation
-sample (rounded up, actual fraction saved) and adds every behavioral-category
+sample (rounded down, minimum one, actual fraction saved) and adds every behavioral-category
 response and failed judge parse. The queue omits model identity, judge labels,
 and structured confidence when a parsed answer exists. For a malformed response,
 raw text is shown, so blinding may be imperfect; reviewers should record this.
+The 24-question smoke run selects three uniformly random responses (12.5%).
+For tiny fixtures, a whole-number 10–15% sample may not exist; report the fraction.
 
 Humans copy the queue to a local completed file and fill in grade, abstained,
 behavior_met, specific_unfounded, confident_language, rationale, reviewer_id,

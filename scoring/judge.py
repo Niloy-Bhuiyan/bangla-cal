@@ -58,7 +58,8 @@ def grade_run(run_dir, config, resume=False, provider=None):
     primary_raw = {r["question_id"]: r for r in read_jsonl(folder / "raw.jsonl") if r["sample_index"] == 0}
     out = folder / "grading"
     plan = {"config": asdict(config), "version": JUDGE_VERSION, "rubric_sha256": digest(RUBRIC),
-            "responses_sha256": digest(responses), "questions_sha256": digest(questions)}
+            "responses_sha256": digest(responses), "questions_sha256": digest(questions),
+            "code_sha256": digest(Path(__file__).read_text(encoding="utf-8"))}
     meta = out / "judge_manifest.json"
     if meta.exists():
         if not resume:

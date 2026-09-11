@@ -25,8 +25,9 @@ def create_queue(run_dir, fraction=0.15, seed=42, expand=False):
     raw = {r["question_id"]: r["text"] for r in read_jsonl(folder / "raw.jsonl") if r["sample_index"] == 0}
     judges = {r["question_id"] for r in read_jsonl(folder / "grading/judge_scores.jsonl")}
     ids = sorted(r["question_id"] for r in responses)
-    # ceil avoids zero-person validation in small pilot runs; report actual fraction.
-    random_ids = set(random.Random(seed).sample(ids, math.ceil(len(ids) * fraction)))
+    # Round down so a 24-question smoke run selects 3 (12.5%), not 4 (16.7%).
+    # Very small fixtures may have no integer sample in the 10–15% range.
+    random_ids = set(random.Random(seed).sample(ids, max(1, math.floor(len(ids) * fraction))))
     if expand:
         previous = json.loads((folder / "grading/validation_plan.json").read_text(encoding="utf-8"))
         random_ids = set(previous["random_ids"])
@@ -54,6 +55,7 @@ def create_queue(run_dir, fraction=0.15, seed=42, expand=False):
         "seed": seed, "requested_fraction": fraction, "actual_fraction": len(random_ids) / len(ids),
         "random_ids": sorted(random_ids), "population_ids": ids, "queue_ids": [r["question_id"] for r in queue],
         "response_sha256": digest(responses), "created_at": now(), "queue_file": queue_name,
+        "code_sha256": digest(Path(__file__).read_text(encoding="utf-8")),
         "note": "random sample plus all behavioral categories and failed judge parses"})
     return queue
 

@@ -1,0 +1,21 @@
+{
+  "label": "PRELIMINARY, UNREVIEWED DATA",
+  "plan": {
+    "config": {
+      "provider": "gemini",
+      "model": "gemini-3.5-flash",
+      "tier": "free",
+      "max_tokens": 1024,
+      "interval_seconds": 6.0,
+      "timeout": 90,
+      "logprobs": false
+    },
+    "version": "judge-v1",
+    "rubric_sha256": "6e154a0bba5bde579591e2f3a993d26a1aa35ee09a4058056e92250a430c1a8a",
+    "responses_sha256": "1b59738e878dc991eebab0bf03291473d63f16e985d269c2ca7ddbc561f1db2a",
+    "questions_sha256": "452e93d94b4f0d426daee2526b810704b411ab5ebe8507af2d6c9d4fe5718bbd",
+    "code_sha256": "af55d333d705efabba970771133c84370df77f21b4bccc11478220a78fe5a434"
+  },
+  "created_at": "2026-09-11T07:34:13.137425+00:00",
+  "human_validation": "PENDING HUMAN VALIDATION"
+}

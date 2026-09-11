@@ -1,0 +1,73 @@
+{
+  "label": "PRELIMINARY, UNREVIEWED DATA",
+  "status": "PENDING HUMAN VALIDATION",
+  "human_completed": 0,
+  "queue_size": 19,
+  "random_sample_size": 3,
+  "random_pairs_complete": 0,
+  "agreement": {
+    "grade": {
+      "estimate": null,
+      "ci95": null,
+      "n_questions": 0,
+      "resamples": 2000,
+      "valid_resamples": 0,
+      "undefined_resamples": 2000,
+      "seed": 42,
+      "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+    },
+    "abstained": {
+      "estimate": null,
+      "ci95": null,
+      "n_questions": 0,
+      "resamples": 2000,
+      "valid_resamples": 0,
+      "undefined_resamples": 2000,
+      "seed": 42,
+      "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+    },
+    "behavior_met": {
+      "estimate": null,
+      "ci95": null,
+      "n_questions": 0,
+      "resamples": 2000,
+      "valid_resamples": 0,
+      "undefined_resamples": 2000,
+      "seed": 42,
+      "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+    },
+    "specific_unfounded": {
+      "estimate": null,
+      "ci95": null,
+      "n_questions": 0,
+      "resamples": 2000,
+      "valid_resamples": 0,
+      "undefined_resamples": 2000,
+      "seed": 42,
+      "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+    },
+    "confident_language": {
+      "estimate": null,
+      "ci95": null,
+      "n_questions": 0,
+      "resamples": 2000,
+      "valid_resamples": 0,
+      "undefined_resamples": 2000,
+      "seed": 42,
+      "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+    },
+    "kappa_grade": {
+      "estimate": null,
+      "ci95": null,
+      "n_questions": 0,
+      "resamples": 2000,
+      "valid_resamples": 0,
+      "undefined_resamples": 2000,
+      "seed": 42,
+      "method": "question-cluster percentile bootstrap; intervals conditional on defined resamples"
+    }
+  },
+  "disagreement_ids": [],
+  "unresolved_ids": [],
+  "note": "Agreement measured on random sample only; human overrides do not rewrite original judge labels."
+}

@@ -1,0 +1,53 @@
+{
+  "label": "PRELIMINARY, UNREVIEWED DATA",
+  "run_id": "groq",
+  "created_at": "2026-09-11T07:23:24.636127+00:00",
+  "code_revision": "985c5c3bf6f78f09012efd97a76ac6336c57f7d8",
+  "plan": {
+    "config": {
+      "provider": "groq",
+      "model": "qwen/qwen3.8-27b",
+      "tier": "free",
+      "max_tokens": 1024,
+      "interval_seconds": 6.0,
+      "timeout": 90,
+      "logprobs": false
+    },
+    "dataset_sha256": "2ec218415d4cf4efd673c50377f50a015e97ca87eb1cd42feafc9eb8d3955d46",
+    "selected_ids": [
+      "ban-cal-0102",
+      "ban-cal-0120",
+      "ban-cal-0129",
+      "ban-cal-0137",
+      "ban-cal-0142",
+      "ban-cal-0157",
+      "ban-cal-0101",
+      "ban-cal-0117",
+      "ban-cal-0124",
+      "ban-cal-0136",
+      "ban-cal-0146",
+      "ban-cal-0152",
+      "ban-cal-0105",
+      "ban-cal-0111",
+      "ban-cal-0127",
+      "ban-cal-0135",
+      "ban-cal-0149",
+      "ban-cal-0155",
+      "ban-cal-0110",
+      "ban-cal-0118",
+      "ban-cal-0122",
+      "ban-cal-0132",
+      "ban-cal-0145",
+      "ban-cal-0160"
+    ],
+    "samples": 3,
+    "sample_temperature": 0.7,
+    "primary_temperature": 0.0,
+    "seed": 42,
+    "prompt_version": "bn-confidence-v1",
+    "prompt_sha256": "eed1be575fa380a53c6924faf4b44faef0ec11a01478260645feab609d6391e6"
+  },
+  "status": "complete",
+  "completed_at": "2026-09-11T07:33:41.314129+00:00",
+  "completed_questions": 24
+}
