@@ -173,7 +173,8 @@ class Workspace:
                     check = Path(tmp) / "review.jsonl"
                     append_jsonl(check, entry)
                     assess_reviews(questions, [check])
-                target = self.local / "dataset-reviews" / (digest(reviewer)[:24] + ".jsonl")
+                revision = digest([question_hash(q) for q in questions])[:24]
+                target = self.local / "dataset-reviews" / revision / (digest(reviewer)[:24] + ".jsonl")
                 if any(r["question_id"] == entry["question_id"] and r["question_sha256"] == entry["question_sha256"]
                        for r in read_jsonl(target)):
                     raise ValueError("Your first decision for this revision is already saved. It will not be overwritten.")

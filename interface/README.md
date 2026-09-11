@@ -58,8 +58,10 @@ no paid fallback and never changes account billing settings.
 
 All interface-created runs and submissions are under gitignored `results/local/`.
 Native-speaker submissions are stored in
-`results/local/interface/dataset-reviews/REVIEWER_HASH.jsonl`. The save message
-identifies the file. These are actual human submissions only: the software and
+`results/local/interface/dataset-reviews/REVISION_HASH/REVIEWER_HASH.jsonl`. The save message
+identifies the file. Changed dataset content gets a separate review directory,
+so previous first decisions remain available without being mistaken for a review
+of the new revision. These are actual human submissions only: the software and
 its tests do not assign reviewer identities to the real dataset or change
 `reviewed_by`. The maintainer must verify identity/independence, adjudicate, and
 update reviewed dataset revisions using the construction protocol.

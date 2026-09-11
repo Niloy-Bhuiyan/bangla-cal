@@ -13,7 +13,7 @@ import time
 import unittest
 from unittest.mock import patch
 
-from dataset.review import CHECKS, question_hash
+from dataset.review import CHECKS, assess_reviews, question_hash
 from interface.server import ROOT, Workspace, make_server
 from interface.worker import assessment, execute
 from runner.io import read_jsonl
@@ -64,6 +64,12 @@ class InterfaceTests(unittest.TestCase):
             self.workspace.mutate("review", data)
         public = self.workspace.dataset(key)
         self.assertTrue(all(not row["reviewed_by"] for row in public))
+        public[0]["source_note"] += " Changed synthetic reference for a new test revision."
+        (self.root / key).write_text("".join(json.dumps(row, ensure_ascii=False) + "\n" for row in public), encoding="utf-8")
+        fresh = self.workspace.mutate("review", {**data, "question_sha256": question_hash(public[0])})
+        self.assertNotEqual(result["file"], fresh["file"])
+        self.assertEqual(len(read_jsonl(self.root / result["file"])), 1)
+        assess_reviews(public, [self.root / fresh["file"]])
 
     def test_archive_is_read_only_and_blinded_grades_reach_assessment(self):
         key, archive = self.fixture()
