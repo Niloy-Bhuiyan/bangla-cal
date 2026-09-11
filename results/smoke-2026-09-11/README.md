@@ -36,14 +36,15 @@ are in each manifest/raw log. A returned model ID may be a mutable alias.
 ## Budget and future batching
 
 Both response runs completed: 24 questions and 96 raw generation replies each,
-with zero parse failures. Initial judging is **incomplete**: 8/24 Gemini responses
+with zero parse failures. Initial judging is **incomplete**: 9/24 Gemini responses
 and 12/24 Groq responses were graded. Gemini `gemini-3.5-flash` returned HTTP 429
 with `GenerateRequestsPerDayPerProjectPerModel-FreeTier`, quota value **20**.
 The error payloads are preserved under each grading directory. One earlier HTTP
 503 service-demand error was also retained and recovered through resume.
 
-There are 28 outstanding judge requests. Proposed continuation: use the next two
-daily quota windows for 20 then 8 requests on the same judge; preserve all model,
+There are 27 outstanding judge requests. A maintainer-requested retry saved one
+additional grade before the same daily-quota error returned. Proposed continuation:
+use the next two daily quota windows for 20 then 7 requests on the same judge; preserve all model,
 prompt, and input settings. A short retryDelay in an error does not remove its
 explicit per-day quota. No extra keys/accounts, paid service or substitute judge
 were used to bypass this limit. No further API calls are scheduled automatically.

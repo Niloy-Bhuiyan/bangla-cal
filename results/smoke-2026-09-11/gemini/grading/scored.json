@@ -2,7 +2,7 @@
   "label": "PRELIMINARY, UNREVIEWED DATA",
   "status": "PENDING HUMAN VALIDATION",
   "n_responses": 24,
-  "n_ungraded": 16,
+  "n_ungraded": 15,
   "rows": [
     {
       "label": "PRELIMINARY, UNREVIEWED DATA",
@@ -153,6 +153,25 @@
       "specific_unfounded": false,
       "confident_language": false,
       "rationale": "The response correctly identifies Dhaka University as the organizer of Mangal Shobhajatra, matching the ground truth.",
+      "grade_source": "judge",
+      "validation_status": "PENDING HUMAN VALIDATION"
+    },
+    {
+      "label": "PRELIMINARY, UNREVIEWED DATA",
+      "question_id": "ban-cal-0124",
+      "provider": "gemini",
+      "model": "gemini-3.5-flash-lite",
+      "category": "temporally_unstable",
+      "expected_behavior": "hedge_temporal",
+      "ground_truth_answer": null,
+      "confidence": 0.0,
+      "self_consistency": 0.0,
+      "grade": "correct",
+      "abstained": true,
+      "behavior_met": true,
+      "specific_unfounded": false,
+      "confident_language": false,
+      "rationale": "The response correctly declines to provide a specific schedule for a future date (September 11, 2026), noting that reliable information is unavailable and schedules can change, which perfectly aligns with the expected temporal hedging behavior.",
       "grade_source": "judge",
       "validation_status": "PENDING HUMAN VALIDATION"
     }
