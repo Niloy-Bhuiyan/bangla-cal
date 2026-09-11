@@ -32,7 +32,8 @@ class ProviderError(RuntimeError):
 
 def request_json(url, payload=None, headers=None, timeout=90):
     request = Request(url, data=None if payload is None else json.dumps(payload).encode(),
-                      headers={"Content-Type": "application/json", **(headers or {})})
+                      headers={"Content-Type": "application/json", "User-Agent": "bangla-cal/0.1 (research)",
+                               **(headers or {})})
     try:
         with urlopen(request, timeout=timeout) as response:
             body = json.loads(response.read())
