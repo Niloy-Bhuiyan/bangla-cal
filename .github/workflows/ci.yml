@@ -1,0 +1,47 @@
+name: Offline verification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -v
+      - run: python -m dataset.validate dataset/examples.jsonl dataset/draft-v0.1-batch01.jsonl
+      - name: Reproduce archived metrics without credentials or API calls
+        shell: python
+        run: |
+          import json
+          import tempfile
+          from pathlib import Path
+          from report.generate import generate
+          runs = [Path('results/smoke-2026-09-11') / p for p in ('gemini', 'groq')]
+          saved = json.loads(Path('report/smoke-2026-09-11/metrics.json').read_text(encoding='utf-8'))
+          with tempfile.TemporaryDirectory() as output:
+              actual = generate(runs, output, saved['resamples'], saved['seed'])
+          assert actual == saved['summaries'], 'Archived metric estimates or bootstrap intervals changed'
+      - name: Check that local credential files are not tracked
+        shell: python
+        run: |
+          import subprocess
+          from pathlib import PurePosixPath
+          paths = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          for path in filter(None, paths):
+              name = PurePosixPath(path).name
+              assert not (name == '.env' or name.startswith('.env.') and name != '.env.example'), path

@@ -1,5 +1,7 @@
 # Bangla-Cal
 
+[![Offline verification](https://github.com/Niloy-Bhuiyan/bangla-cal/actions/workflows/ci.yml/badge.svg)](https://github.com/Niloy-Bhuiyan/bangla-cal/actions/workflows/ci.yml)
+
 A Bengali-language research benchmark for whether a language model's confidence
 matches its correctness, and whether it admits uncertainty instead of inventing
 answers. The deliverables are a carefully reviewed dataset and reproducible
@@ -34,7 +36,13 @@ responses total), with no parse failures. Initial judging is **21/48 complete**:
 judge hit its confirmed **20 requests/project/model/day** quota, including after
 a maintainer-requested retry. **27 grades remain pending.** The report uses only
 the graded subset and must not be used to rank models. No human reviews or human
-grades have been recorded. The offline suite currently contains 23 passing tests.
+grades have been recorded. The offline suite currently contains 27 passing tests.
+
+This repository is prepared as a **public research preview**. Read the
+[release notes and remaining gates](docs/RELEASE.md) and
+[dataset card](dataset/DATASET_CARD.md). Its interface is the Python command line
+and generated Markdown/CSV/JSON reports with charts. A validated benchmark
+release still needs the human review and evaluation work described below.
 
 The full [research specification](bengali-ai-reliability-benchmark-spec.md) is
 committed as the persistent source of truth. No OpenAI or Anthropic API is called.
@@ -64,6 +72,16 @@ model using `ollama pull MODEL`. The adapter only calls `127.0.0.1`; cloud-tagge
 Ollama models are rejected. Local hardware needs depend on the chosen model.
 
 ## Reproduce the real smoke test
+
+To inspect the saved results without keys or API calls:
+
+```sh
+python -m report.generate results/smoke-2026-09-11/gemini results/smoke-2026-09-11/groq --output report/generated
+```
+
+Reports audit saved raw responses, derived confidence, and scoring provenance;
+stale or inconsistent artifacts are rejected. CI independently reproduces the
+archived metric estimates and bootstrap intervals on Windows and Linux.
 
 The convenience command runs 24 questions, balanced across six categories, with
 three nonzero-temperature samples per primary response, then a separate Gemini
@@ -136,6 +154,8 @@ denominators, bootstrap settings, and counts of undefined resamples.
 - **Dataset:** Niloy must recruit a second native Bengali speaker. Independently
   review every candidate, resolve disagreement, expand coverage toward 400–600,
   archive time-sensitive sources, and freeze a version only after two sign-offs.
+  Give each reviewer a separate [blank form](dataset/review-forms/batch01/) and
+  follow the [version-bound review instructions](dataset/CONSTRUCTION.md).
 - **Grading:** complete the blinded queue with real reviewer IDs, dates and
   rationales. Human grade fields currently remain null; judge/human agreement
   is unavailable. Dataset review and response grading are different tasks.
@@ -146,7 +166,8 @@ denominators, bootstrap settings, and counts of undefined resamples.
 - **Research release:** perform full reviewed-dataset evaluations and write the
   final findings, including null results. No frozen dataset, validated leaderboard,
   full evaluation, or paper is claimed complete. `report.generate --release`
-  enforces size, review, completion, and grading gates.
+  enforces size, review, completion, and grading gates, including actual
+  matching submissions supplied with `--dataset-reviews`.
 
 See [construction guidelines](dataset/CONSTRUCTION.md),
 [grading instructions](scoring/README.md), [metric definitions](metrics/README.md),

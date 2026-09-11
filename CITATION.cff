@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: >-
+  Cite this repository as preliminary research software. The dataset is an
+  unreviewed draft and the smoke results are not validated benchmark findings.
+type: software
+title: 'Bangla-Cal: Bengali calibration and hallucination benchmark toolkit'
+authors:
+  - family-names: Bhuiyan
+    given-names: Niloy
+repository-code: 'https://github.com/Niloy-Bhuiyan/bangla-cal'
+url: 'https://github.com/Niloy-Bhuiyan/bangla-cal'
+license: MIT
+abstract: >-
+  A reproducible Python toolkit for evaluating confidence calibration,
+  hallucination, and abstention in Bengali question answering using free-tier
+  Gemini, free-tier Groq, and local Ollama. Includes draft question data,
+  question-level bootstrap intervals, independent judge/human validation
+  workflows, and explicitly preliminary real-model smoke artifacts.
+keywords:
+  - Bengali
+  - calibration
+  - hallucination
+  - evaluation
