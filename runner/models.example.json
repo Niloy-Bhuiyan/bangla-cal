@@ -1,0 +1,5 @@
+[
+  {"provider": "gemini", "model": "gemini-3.5-flash-lite", "tier": "free", "interval_seconds": 15},
+  {"provider": "groq", "model": "qwen/qwen3.8-27b", "tier": "free", "interval_seconds": 6},
+  {"provider": "ollama", "model": "qwen3:0.6b", "tier": "local", "interval_seconds": 0}
+]
