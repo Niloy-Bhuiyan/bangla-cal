@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BAN-CAL question v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "category", "question_bn", "question_en_gloss", "expected_behavior", "ground_truth_answer", "source_note", "difficulty_tier", "reviewed_by", "notes"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^ban-cal-[0-9]{4}$"},
+    "category": {"enum": ["factual_high_certainty", "factual_low_resource", "temporally_unstable", "ambiguous_contested", "unanswerable_adversarial", "code_switched"]},
+    "question_bn": {"type": "string", "minLength": 5, "pattern": "[\u0980-\u09ff]"},
+    "question_en_gloss": {"type": "string", "minLength": 5},
+    "expected_behavior": {"enum": ["answer", "abstain", "hedge_disagreement", "hedge_temporal"]},
+    "ground_truth_answer": {"type": ["string", "null"], "minLength": 1},
+    "source_note": {"type": "string", "minLength": 10},
+    "difficulty_tier": {"enum": ["easy", "medium", "hard"]},
+    "reviewed_by": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 2, "pattern": "\\S"}},
+    "notes": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {"if": {"properties": {"expected_behavior": {"const": "answer"}}}, "then": {"properties": {"ground_truth_answer": {"type": "string", "pattern": "\\S"}}}},
+    {"if": {"properties": {"category": {"enum": ["factual_high_certainty", "factual_low_resource"]}}}, "then": {"properties": {"expected_behavior": {"const": "answer"}}}},
+    {"if": {"properties": {"category": {"const": "temporally_unstable"}}}, "then": {"properties": {"expected_behavior": {"const": "hedge_temporal"}}}},
+    {"if": {"properties": {"category": {"const": "ambiguous_contested"}}}, "then": {"properties": {"expected_behavior": {"const": "hedge_disagreement"}}}},
+    {"if": {"properties": {"category": {"const": "unanswerable_adversarial"}}}, "then": {"properties": {"expected_behavior": {"const": "abstain"}}}}
+  ]
+}
