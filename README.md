@@ -36,12 +36,13 @@ responses total), with no parse failures. Initial judging is **21/48 complete**:
 judge hit its confirmed **20 requests/project/model/day** quota, including after
 a maintainer-requested retry. **27 grades remain pending.** The report uses only
 the graded subset and must not be used to rank models. No human reviews or human
-grades have been recorded. The offline suite currently contains 28 passing tests.
+grades have been recorded. The offline suite currently contains 33 passing tests.
 
 This repository is prepared as a **public research preview**. Read the
 [release notes and remaining gates](docs/RELEASE.md) and
-[dataset card](dataset/DATASET_CARD.md). Its interface is the Python command line
-and generated Markdown/CSV/JSON reports with charts. A validated benchmark
+[dataset card](dataset/DATASET_CARD.md). A local browser interface supports
+dataset review, evaluation runs, blinded human grading, and report exploration;
+the Python command line remains available. A validated benchmark
 release still needs the human review and evaluation work described below.
 
 The full [research specification](bengali-ai-reliability-benchmark-spec.md) is
@@ -59,6 +60,24 @@ python -m pip install -r requirements.txt
 python -m unittest discover -v
 python -m dataset.validate dataset/examples.jsonl dataset/draft-v0.1-batch01.jsonl
 ```
+
+## Open the browser interface
+
+```sh
+python -m interface.server
+```
+
+Open **http://127.0.0.1:8765**. No frontend dependencies or build step are needed.
+Explore saved reports without API calls, review candidate questions, manage local
+evaluation runs, and complete blinded human grading. Archived runs are read-only;
+use **Create local working copy** to continue their workflow. Actual human
+submissions and new runs stay under gitignored `results/local/`.
+
+See the [interface guide](interface/README.md) for the review workflow, resumable
+tasks, quota behavior, and local file locations. Saving a native-speaker review
+never automatically marks a dataset question as reviewed.
+
+## Provider setup
 
 Copy `.env.example` to `.env` and fill in `GEMINI_API_KEY` and `GROQ_API_KEY`
 locally. `.env` is gitignored; do not put keys in JSON configs or command-line
@@ -197,6 +216,7 @@ scoring/             Judge scoring, human-review queue, agreement
 metrics/             Calibration, abstention, bootstrap uncertainty
 results/             Raw run logs and computed metrics
 report/              Methodology, generated tables/charts, limitations
+interface/           Local browser workspace for the existing pipeline
 ```
 
 ## Phased plan and release gates

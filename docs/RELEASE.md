@@ -10,8 +10,10 @@ offline tests, and labeled real-model smoke artifacts are available for public
 inspection and contribution. Cite the repository and exact Git revision using
 `CITATION.cff`; no DOI, paper acceptance, or novelty claim is asserted.
 
-The interface is a Python command line and generated Markdown report with CSV,
-JSON, and PNG figures. No hosted interactive dashboard is required by the spec.
+The interface includes a local browser workspace for dataset review, evaluation
+jobs, blinded human grading, and results exploration, alongside the Python
+command line and generated Markdown/CSV/JSON/PNG reports. Start it with
+`python -m interface.server`; no hosted dashboard or paid service is required.
 
 The software includes free-tier Gemini/Groq and local Ollama adapters, resumable
 raw logs, verbalized and sampling confidence, known-answer metric tests,
