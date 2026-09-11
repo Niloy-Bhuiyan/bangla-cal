@@ -36,7 +36,7 @@ responses total), with no parse failures. Initial judging is **21/48 complete**:
 judge hit its confirmed **20 requests/project/model/day** quota, including after
 a maintainer-requested retry. **27 grades remain pending.** The report uses only
 the graded subset and must not be used to rank models. No human reviews or human
-grades have been recorded. The offline suite currently contains 27 passing tests.
+grades have been recorded. The offline suite currently contains 28 passing tests.
 
 This repository is prepared as a **public research preview**. Read the
 [release notes and remaining gates](docs/RELEASE.md) and

@@ -14,6 +14,13 @@ def row(qid, confidence=0.8, grade="correct", **overrides):
 
 
 class MetricsTests(unittest.TestCase):
+    def test_repeated_decimal_confidence_has_stable_sum(self):
+        # All predictions have confidence .1 and are wrong: mean and ECE=.1.
+        # Naive summation drifts for this input on older supported Python versions.
+        p, y = [0.1] * 100, [0] * 100
+        self.assertEqual(calibration_bins(p, y)[1]["confidence"], 0.1)
+        self.assertEqual(ece(p, y), 0.1)
+
     def test_known_ece_and_brier(self):
         # Bin [0,.5): conf=.25, acc=.5. Bin [.5,1]: conf=.75, acc=1.
         # ECE=.5*.25 + .5*.25=.25. Brier=(.04+.49+.09+.04)/4=.165.

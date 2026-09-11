@@ -30,19 +30,19 @@ def calibration_bins(confidences, correct, bins=10):
     for p, y in zip(confidences, correct):
         groups[min(int(p * bins), bins - 1)].append((p, y))
     return [{"lower": i / bins, "upper": (i + 1) / bins, "n": len(group),
-             "confidence": sum(p for p, _ in group) / len(group) if group else None,
+             "confidence": math.fsum(p for p, _ in group) / len(group) if group else None,
              "accuracy": sum(y for _, y in group) / len(group) if group else None}
             for i, group in enumerate(groups)]
 
 
 def ece(confidences, correct, bins=10):
     groups = calibration_bins(confidences, correct, bins)
-    return sum(g["n"] * abs(g["confidence"] - g["accuracy"]) for g in groups if g["n"]) / len(confidences) if confidences else None
+    return math.fsum(g["n"] * abs(g["confidence"] - g["accuracy"]) for g in groups if g["n"]) / len(confidences) if confidences else None
 
 
 def brier(confidences, correct):
     validate_pairs(confidences, correct)
-    return sum((p - y) ** 2 for p, y in zip(confidences, correct)) / len(confidences) if confidences else None
+    return math.fsum((p - y) ** 2 for p, y in zip(confidences, correct)) / len(confidences) if confidences else None
 
 
 def ratio(numerator, denominator):
