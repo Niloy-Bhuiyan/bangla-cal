@@ -13,18 +13,27 @@ dependency. Keep the terminal running; Ctrl+C stops the server and its task.
 
 ## Four workspaces
 
-- **Results & overview:** select an archived or locally generated report,
+- **Results:** select an archived or locally generated report,
   inspect model/category metrics and 95% bootstrap intervals, view calibration
   and risk–coverage charts, and download the report, CSV, or JSON. Small sample
   sizes, incomplete judging, and pending human validation remain visible.
-- **Dataset review:** filter/search questions, inspect Bengali text and source
+- **Questions:** filter/search questions, inspect Bengali text and source
   notes, and submit your own native-speaker review. All checks start undecided.
   Other reviewers' submissions are not displayed. The first decision for each
   reviewer/question revision is preserved; substantive changes need fresh review.
+  Previous/Next navigation preserves unfinished fields during the current page
+  session. Your entered reviewer ID carries across questions in that session;
+  decisions and attestations are never preselected. A page refresh clears the ID
+  and unsaved drafts; use a fresh page session when switching reviewers.
+  Saving a review advances to the
+  next matching question and leaves the dataset's review IDs unchanged.
 - **Evaluations:** create a local copy of an archived run, start or resume
   generation, use a separate free/local judge, prepare/assess human queues,
   expand a queue after low agreement, and generate reports. The task log shows
-  actual progress and provider errors. Only one task runs at a time.
+  actual progress and provider errors. Only one task runs at a time. Use
+  **New evaluation** or a run's **Judge answers** button to open the relevant
+  form. Less common operations are under **More actions**; token and interval
+  settings are under **Advanced settings**.
 - **Human grading:** work through the blinded queue, supplying actual reviewer
   IDs, dates, labels, and rationales. Saving a grade advances to the next answer.
   Refresh assessment to calculate agreement; saving a grade alone does not
@@ -33,7 +42,7 @@ dependency. Keep the terminal running; Ctrl+C stops the server and its task.
 ## A practical first session
 
 1. Open Results to inspect the actual preliminary smoke report without API calls.
-2. In Evaluations, create a local working copy of an archived run. The archive
+2. In Evaluations, use **Make local copy** on an archived run. The archive
    remains read-only. Preparing its existing queue and generating a report from
    saved grades require no provider calls.
 3. A real human can complete its queue in Human grading. Use Prepare / assess

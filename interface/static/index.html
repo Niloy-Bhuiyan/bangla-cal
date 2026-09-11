@@ -10,23 +10,22 @@
 </head>
 <body>
   <a class="skip" href="#content">Skip to workspace</a>
-  <aside class="sidebar">
-    <a class="brand" href="/"><span class="brand-mark" lang="bn">ব</span><span>bangla-cal<small>RESEARCH WORKSPACE</small></span></a>
-    <div class="nav-label">WORKSPACE</div>
+  <header class="app-header">
+    <a class="brand" href="/">Bangla-Cal</a>
     <nav aria-label="Workspace">
-      <button data-view="results" class="active"><span>01</span> Results & overview</button>
-      <button data-view="dataset"><span>02</span> Dataset review</button>
-      <button data-view="runs"><span>03</span> Evaluations</button>
-      <button data-view="grading"><span>04</span> Human grading</button>
+      <button data-view="results" class="active">Results</button>
+      <button data-view="dataset">Questions</button>
+      <button data-view="runs">Evaluations</button>
+      <button data-view="grading">Human grading</button>
     </nav>
-    <div class="sidebar-note"><span class="dot"></span> Local workspace<p>Your API keys stay on this computer. Human review remains a separate, required step.</p><a href="https://github.com/Niloy-Bhuiyan/bangla-cal" target="_blank" rel="noreferrer">View repository ↗</a></div>
-  </aside>
+    <a class="repo-link" href="https://github.com/Niloy-Bhuiyan/bangla-cal" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </header>
   <div class="workspace">
-    <header class="topbar"><span>BENGALI AI RELIABILITY</span><span class="badge">Research preview</span></header>
-    <main id="content" tabindex="-1"><div class="empty">Loading your research workspace…</div></main>
+    <main id="content" tabindex="-1"><div class="empty">Loading…</div></main>
     <section id="job" aria-label="Task progress" hidden></section>
-    <footer>Bangla-Cal · Calibration, hallucination & uncertainty · Maintained by Niloy Bhuiyan</footer>
+    <footer><span>Local workspace · Keys stay on this computer</span><span>Research preview</span></footer>
   </div>
+  <dialog id="task-dialog" aria-labelledby="dialog-title"></dialog>
   <div id="notice" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

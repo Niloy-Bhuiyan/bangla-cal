@@ -77,15 +77,20 @@ class Workspace:
         for key, folder in self.catalog("results", "manifest.json").items():
             manifest = read_json(folder / "manifest.json")
             agreement = read_json(folder / "grading/agreement.json", {})
+            judge = read_json(folder / "grading/judge_manifest.json", {})
             runs.append({"id": key, "label": manifest["label"], "status": manifest["status"],
                          "config": manifest["plan"]["config"], "planned": len(manifest["plan"]["selected_ids"]),
                          "completed": len(read_jsonl(folder / "responses.jsonl")),
                          "judged": len(read_jsonl(folder / "grading/judge_scores.jsonl")),
                          "human": agreement.get("human_completed", 0),
                          "agreement_status": agreement.get("status", "Not assessed"),
+                         "judge_config": judge.get("plan", {}).get("config"),
                          "local": folder.is_relative_to(self.root / "results/local"),
                          "has_queue": (folder / "grading/validation_plan.json").exists()})
-        return {"datasets": [{"id": key, "count": len(load_questions(path))} for key, path in self.datasets().items()],
+        pilots = set(read_json(self.root / "dataset/pilot_ids.json", []))
+        return {"datasets": [{"id": key, "count": len(load_questions(path)),
+                              "eligible": sum(q["id"] not in pilots for q in load_questions(path))}
+                             for key, path in self.datasets().items()],
                 "runs": runs, "reports": list(self.catalog("report", "metrics.json")),
                 "credentials": {name: bool(os.environ.get(name.upper() + "_API_KEY")) for name in ("gemini", "groq")},
                 "job": self.job_status()}

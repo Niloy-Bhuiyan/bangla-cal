@@ -70,7 +70,7 @@ python -m interface.server
 Open **http://127.0.0.1:8765**. No frontend dependencies or build step are needed.
 Explore saved reports without API calls, review candidate questions, manage local
 evaluation runs, and complete blinded human grading. Archived runs are read-only;
-use **Create local working copy** to continue their workflow. Actual human
+use **Make local copy** to continue their workflow. Actual human
 submissions and new runs stay under gitignored `results/local/`.
 
 See the [interface guide](interface/README.md) for the review workflow, resumable
